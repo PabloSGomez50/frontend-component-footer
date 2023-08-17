@@ -61,6 +61,7 @@ class SiteFooter extends React.Component {
             />
           </a>
           <div className="flex-grow-1" />
+            <span>Este es un mensaje personalizado del footer</span>
           {showLanguageSelector && (
             <LanguageSelector
               options={supportedLanguages}
