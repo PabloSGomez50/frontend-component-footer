@@ -56,12 +56,14 @@ class SiteFooter extends React.Component {
           >
             <img
               style={{ maxHeight: 45 }}
-              src={logo || config.LOGO_TRADEMARK_URL}
+              src={logo || "https://raw.githubusercontent.com/PabloSGomez50/frontend-app-authn/my_palm/src/sass/logo_dark.svg"}
               alt={intl.formatMessage(messages['footer.logo.altText'])}
             />
           </a>
           <div className="flex-grow-1" />
             <span>Este es un mensaje personalizado del footer</span>
+            <p>logo_dark.svg</p>
+            <img src="https://raw.githubusercontent.com/PabloSGomez50/frontend-app-authn/my_palm/src/sass/logo_dark.svg" />
           {showLanguageSelector && (
             <LanguageSelector
               options={supportedLanguages}
