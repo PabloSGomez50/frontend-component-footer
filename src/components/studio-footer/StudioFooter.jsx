@@ -39,6 +39,7 @@ const StudioFooter = ({
 
   return (
     <>
+      {/*
       <div className="m-0 mt-6 row align-items-center justify-content-center">
         <div className="col border-top mr-2" />
         <Button
@@ -54,6 +55,28 @@ const StudioFooter = ({
         </Button>
         <div className="col border-top ml-2" />
       </div>
+      */}
+      <div className="container-fluid d-flex">
+          <a
+            className="d-block"
+            href={config.LMS_BASE_URL}
+            // aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
+          >
+            <img
+              style={{ maxHeight: 45 }}
+              src={config.LOGO_TRADEMARK_URL}
+              // alt={intl.formatMessage(messages['footer.logo.altText'])}
+            />
+          </a>
+          <div className="flex-grow-1" />
+            <span>Este es un mensaje personalizado del footer</span>
+          {showLanguageSelector && (
+            <LanguageSelector
+              options={supportedLanguages}
+              onSubmit={onLanguageSelected}
+            />
+          )}
+      </div>
       <Container
         size="xl"
         className={classNames('px-4', containerClassName)}
@@ -63,6 +86,7 @@ const StudioFooter = ({
           {isOpen ? (
             <ActionRow key="help-link-button-row" className="py-4" data-testid="helpButtonRow">
               <ActionRow.Spacer />
+              {/*               
               <Button as="a" href="https://docs.edx.org/" size="sm">
                 <FormattedMessage {...messages.edxDocumentationButtonLabel} />
               </Button>
@@ -88,6 +112,8 @@ const StudioFooter = ({
               >
                 <FormattedMessage {...messages.studioXButtonLabel} />
               </Button>
+              */}
+
               {!isEmpty(config.SUPPORT_EMAIL) && (
                 <Button
                   as="a"
@@ -122,7 +148,7 @@ const StudioFooter = ({
               {intl.formatMessage(messages.accessibilityRequestLinkLabel)}
             </Hyperlink>
           )}
-          <Hyperlink destination={config.LMS_BASE_URL}>LMS</Hyperlink>
+          {/* <Hyperlink destination={config.LMS_BASE_URL}>LMS</Hyperlink> */}
         </ActionRow>
         <ActionRow className="mt-3 pb-4 x-small">
           {/*
